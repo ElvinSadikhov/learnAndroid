@@ -1,0 +1,88 @@
+//An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet. It is called an "iterator" because "iterating" is the technical term for looping.
+
+//To use an Iterator, you must import it from the java.util package.
+
+
+// Import the ArrayList class and the Iterator class
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+
+    // Make a collection
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+
+    // Get the iterator
+    Iterator<String> it = cars.iterator();
+
+    // Print the first item
+    System.out.println(it.next());
+  }
+}
+
+//looping through it
+
+while(it.hasNext()) {
+  System.out.println(it.next());
+}
+
+//removing
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(12);
+    numbers.add(8);
+    numbers.add(2);
+    numbers.add(23);
+    Iterator<Integer> it = numbers.iterator();
+    while(it.hasNext()) {
+      Integer i = it.next();
+      if(i < 10) {
+        it.remove();
+      }
+    }
+    System.out.println(numbers);
+  }
+}
+
+! NOTE: Trying to remove items using a for loop or a for-each loop would not work correctly because the collection is changing size at the same time that the code is trying to loop.
+
+//if you want your class to be iterable you should impement Iterable(can be used with generics) interface
+
+//EXAMPLE OF CREATING AN ITERATOR(look at - stack array implementation)
+
+import java.util.Iterator; //interface
+// Iterable interface we already have built-in in java.lang
+
+//we can write without generics( <Type> )  and actually it is more safe,
+// as we cannot create arrays using generics( ugly cast )
+
+public class Stack_ArrayImplementation<Type> implements Iterable<Type> {
+...
+...
+...
+	public Iterator<Type> iterator() {
+		return new ReverseArrayIterator();
+	}
+
+	private class ReverseArrayIterator implements Iterator<Type> {
+		private int i = N;
+
+		public boolean hasNext() {
+			return i > 0;
+		}
+
+		public Type next() {
+			return s[--i];
+		}
+	}
+}

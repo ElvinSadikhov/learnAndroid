@@ -1,0 +1,47 @@
+//must import package
+	import java.util.ArrayList;
+
+//creating an ArrayList
+	ArrayList<type> list = new ArrayList(VIRTUAL CAPACITY(10 by default));(type => String,Integer,Object...)
+
+	(here  the physical capasity is 0, but virtual capcity is 10!)
+	when ph. cap is 4, then virtual one is 6!
+	when ph.cap is 10 and virtual is 0, Java will create 5 more virtual places
+
+//increasing virtual cap.
+	list.ensureCapacity(15);
+
+//adding element to end of ArrayList
+	list.add(element);(must be in the the type)
+
+//returns number of elements in ArrayList
+	list.size();
+
+//returns elemnts at index 
+	list.get(index);
+
+//assign element to index location
+	list.set(index,element);
+
+//deleting an element at index location OR the given element
+	list.remove(index);
+	OR
+	list.remove(element);
+
+//clear method
+	list.clear();
+
+//checking for elements in ArrayList(returns bollean value)
+	list.contains(element);
+
+//returning an index of element(first occurence)
+	list.indexOf(element);
+
+
+//for each loop(easy way) with lambda!(works on JDK 1.8+)
+	list.forEach(num -> Syste.out.println(num));
+	(num is a number of list(one by one))
+	OR
+	list.forEach(e -> Syste.out.println(e.toLowerCase()));
+
+//

@@ -1,0 +1,18 @@
+//this class allows us to change and manupilate strings(this class is not String type)
+	StringBuilder s = new StringBuilder("Hello");
+
+
+//add something to the END of the initial string
+	s.append(char); => char is String,int,double,char...(anything)
+
+//insert something in the given position
+	s.insert(pos,letter); => pos is int, and letter is anything you want
+
+//find a char(type char) at the given position
+	s.charAt(pos); => returns type char! ('C') WITH SINGLE QUOTES
+
+//changing existing letter with another(char)
+	s.setCharAt(pos,letter) => pos is int, and letter is type char!('T') SINGLE QUOTES!
+
+//returns a String version of sequence
+	s.toString(); => value is not type StringBuilder anymore! It's String type

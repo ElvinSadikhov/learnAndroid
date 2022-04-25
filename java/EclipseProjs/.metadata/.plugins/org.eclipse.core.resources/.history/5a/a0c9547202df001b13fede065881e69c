@@ -1,0 +1,55 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Sorting {
+
+	static ArrayList<Integer> createList(int len){
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		for (int i = 0; i < len; i++) {
+			list.add((int) (Math.random() * 100));
+		}
+		return list;
+	}
+	static ArrayList<Integer> bubbleSort(ArrayList<Integer> list) {
+		for (int i = 0; i < list.size() - 1; i++) {
+			for (int j = 0; j < list.size() - 1 - i; j++) {
+				if (list.get(j) < list.get(j + 1)) {
+					int temp = list.get(j);
+					list.set(j, list.get(j + 1));
+					list.set(j + 1, temp);
+				}
+			}
+		}
+
+		return list;
+	}
+
+	static ArrayList<Integer> stoneSort(ArrayList<Integer> list) {
+		for (int i = 1; i <list.size(); i++) {
+			for (int j = list.size() - 1; j >=i; j--) {
+				if (list.get(j) > list.get(j - 1)) {
+					int temp = list.get(j);
+					list.set(j, list.get(j - 1));
+					list.set(j - 1, temp);
+				}
+			}
+		}
+		return list;
+	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Type length of the list: ");
+		int len = in.nextInt();
+
+		ArrayList<Integer> list = createList(len);
+		System.out.println("Initial list: " + list);
+		System.out.println("Sorted one: " + bubbleSort(list));
+		
+		list = createList(len);
+		System.out.println("Initial list: " + list);
+		System.out.println("Sorted one: " + stoneSort(list));
+
+	}
+
+}

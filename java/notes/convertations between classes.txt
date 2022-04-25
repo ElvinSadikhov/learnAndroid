@@ -1,0 +1,17 @@
+//to double
+	double value = Double.parseDouble(STRING);
+//to int
+	int value = Integer.parseInt(STRING);
+//int to String
+	String num = Integer.toString(num);
+		OR
+	String num = String.format("%d",num);
+//double to String
+	String s = String.valueOf(num);	//works for int too!!!
+//File to String(name or path)
+	String name = f.getName();
+		OR
+	String path = f.getPath();
+
+//StringBuilder to String
+	String name = s.toString();(s is a StringBuilder object)

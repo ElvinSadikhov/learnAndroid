@@ -1,0 +1,44 @@
+package tries;
+
+public class TrieST<Value> {
+
+	private static final int R = 256; // ASCII
+	private Node root = new Node();
+
+	private static class Node {
+		private Object val;
+		private Node[] next = new Node[R];
+	}
+
+	public void put(String key, Value val) {
+		root = put(root, key, val, 0);
+	}
+
+	private Node put(Node x, String key, Value val, int d) {
+		// if there is no node, we create one
+		if (x == null)
+			x = new Node();
+		// if it is the last char of a string, then we put the value and quit
+		if (d == key.length()) {
+			x.val = val;
+			return x;
+		}
+		// c is a char and index of it in ascii at the same time
+		char c = key.charAt(d);
+		x.next[c] = put(x.next[c], key, val, d + 1);
+		return x;
+	}
+
+	public boolean contains(String key) {
+		return get(key) != null;
+	}
+
+	public Value get(String key) {
+		Node x = get(root, key, 0);
+		return x == null ? null : (Value) x.val;
+	}
+
+	public void delete(String key) {
+	}
+
+}

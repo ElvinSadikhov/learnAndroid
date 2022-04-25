@@ -1,0 +1,4 @@
+//immutable variable(we can not change it, only can manupilate it)
+
+//comparing 2 Strings(returns 1 if first is greater,-1 if second, and 0 is same)
+	s1.compareTo(s2);

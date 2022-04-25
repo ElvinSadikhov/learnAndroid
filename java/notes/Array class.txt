@@ -1,0 +1,20 @@
+//initializing
+	int[] x; (no storage, just type)
+	int[] x = new int[12]; (creates 12 places with the value of 0)
+	String[] s = new String[12]; (creates 12 places with the value of null)
+	OR
+	int[] x = {1,2,4,4,3};
+	String[] s = {"hello","bye"};
+
+//we can read and write via indexes
+	s[3] = "Hello"; (we put "Hello" in the position 3)
+	x[2] = x[3] + 4; (we read and wrote at the same time)
+
+//length-it is not a method, it's an attribute (Array's length cannot change)
+	x.length; (NOT x.length())
+
+//we can store several types of data in one array
+	Object[] ob = new Object[3];
+	ob[0] = "Hello";//String
+	ob[1] = 1;//int
+	ob[2] = 'f';//char

@@ -1,0 +1,14 @@
+//deleting whitespace from left and righrt, kind of .strip() in PYTHON
+	s.trim();(s is a String)
+
+//getting input
+	String s;
+	Scanner in = new Scanner(System.in);
+	System.out.print("Enter a string");
+	s = in.nextLine();
+	System.out.println("You entered string " + s);
+//getClass() returns a class of an object
+
+//while creating generic array, we should white like this in order to avoid error
+	...function<Type>()...
+	arr = (Type[]) new Object[size];

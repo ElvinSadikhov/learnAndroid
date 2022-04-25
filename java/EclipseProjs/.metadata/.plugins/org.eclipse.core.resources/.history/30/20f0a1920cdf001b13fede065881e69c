@@ -1,0 +1,130 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Sorting {
+
+	private static ArrayList<Integer> createList(int len) {
+
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		for (int i = 0; i < len; i++) {
+			list.add((int) (Math.random() * 100));
+		}
+		return list;
+	}
+
+	private static void swap(ArrayList<Integer> list, int index1, int index2) {
+		int temp = list.get(index1);
+		list.set(index1, list.get(index2));
+		list.set(index2, temp);
+	}
+
+	static ArrayList<Integer> bubbleSort(ArrayList<Integer> list) {
+		for (int i = 0; i < list.size() - 1; i++) {
+			for (int j = 0; j < list.size() - 1 - i; j++) {
+				if (list.get(j) < list.get(j + 1)) {
+					swap(list, j, j + 1);
+				}
+			}
+		}
+
+		return list;
+	}
+
+	static ArrayList<Integer> stoneSort(ArrayList<Integer> list) {
+		for (int i = 1; i < list.size(); i++) {
+			for (int j = list.size() - 1; j >= i; j--) {
+				if (list.get(j) > list.get(j - 1)) {
+					swap(list, j, j - 1);
+				}
+			}
+		}
+		return list;
+	}
+
+	static ArrayList<Integer> selectionSort(ArrayList<Integer> list) {
+		for (int i = 0; i < list.size(); i++) {
+			int indexOfMax = i;
+			for (int j = i; j < list.size(); j++) {
+				if (list.get(j) > list.get(indexOfMax)) {
+					indexOfMax = j;
+				}
+			}
+			swap(list, indexOfMax, i);
+		}
+		return list;
+	}
+
+	static void quickSort_1(ArrayList<Integer> list, int nStart, int nEnd) {
+		//idk, sometimes it does not work!
+		if (nStart >= nEnd)
+			return;
+		int L = nStart;
+		int R = nEnd;
+		int M = (L + R) / 2;
+		System.out.println(L+"+"+R+" /2"+"="+M);
+		while (L <= R) {
+			while (list.get(L) < list.get(M))
+				L += 1;
+			while (list.get(R) > list.get(M))
+				R -= 1;
+			if (L <= R) {
+				swap(list, L, R);
+				L += 1;
+				R -= 1;
+			}
+		}
+		quickSort_1(list, nStart, R);
+		quickSort_1(list, L, nEnd);
+
+	}
+	
+	static ArrayList<Integer> quickSort_2(ArrayList<Integer> list){
+		if (list.size()<2) return list;
+		int X = list.get(list.size()/2);
+		ArrayList<Integer> L = new ArrayList<>();
+		ArrayList<Integer> M = new ArrayList<>();
+		ArrayList<Integer> R = new ArrayList<>();
+		for (int num:list) {
+			if(num<X) L.add(num);
+			else if (num==X) M.add(num);
+			else R.add(num);
+		}
+		ArrayList<Integer> res;
+		res = quickSort_2(L);
+		for (int num:M) res.add(num);
+		for (int num:quickSort_2(R)) res.add(num);
+		
+		return quickSort_2(res);
+		
+	}
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		System.out.print("Type length of the list: ");
+		int len = in.nextInt();
+
+		ArrayList<Integer> list = createList(len);
+		System.out.println("\nInitial list: " + list);
+		System.out.println("BubbleSort: " + bubbleSort(list));
+
+		list = createList(len);
+		System.out.println("\nInitial list: " + list);
+		System.out.println("StoneSort: " + stoneSort(list));
+
+		list = createList(len);
+		System.out.println("\nInitial list: " + list);
+		System.out.println("SelectionSort: " + selectionSort(list));
+
+		list = createList(len);
+		System.out.println("\nInitial list: " + list);
+		quickSort_1(list, 0, len - 1);
+		System.out.println("QuickSort_1: " + list);
+		
+		list = createList(len);
+		System.out.println("\nInitial list: " + list);
+		System.out.println("QuickSort_2: " + quickSort_2(list));
+
+	}
+
+}

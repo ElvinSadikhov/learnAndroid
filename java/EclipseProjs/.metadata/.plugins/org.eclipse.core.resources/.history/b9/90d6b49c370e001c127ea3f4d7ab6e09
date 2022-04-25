@@ -1,0 +1,12 @@
+package Tries;
+
+public class TernaryST<Value> {
+
+	private Node root;
+
+	private class Node {
+		private Value val;
+		private char c;
+		private Node left, mid, right;
+	}
+}

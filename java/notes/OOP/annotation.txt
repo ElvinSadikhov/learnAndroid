@@ -1,0 +1,5 @@
+//Java has three built-in annotations:
+- @Override : Checks that the method is an override. Causes a compile error if the method is not found in one of the parent classes or implemented interfaces.
+- @SuppressWarnings : Instructs the compiler to suppress the compile time warnings specified in the annotation parameters.
+- @Deprecated : Marks the method as obsolete. Causes a compile warning if the method is used.
+

@@ -1,0 +1,18 @@
+package tries;
+
+public class StringST {
+
+	public StringST() {
+
+	}
+
+	public void put(String key, Value val) {
+	}
+
+	public Value get(String key) {
+	}
+
+	public void delete(String key) {
+	}
+
+}

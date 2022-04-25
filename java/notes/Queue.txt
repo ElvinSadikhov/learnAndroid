@@ -1,0 +1,3 @@
+QUEUE	
+//FIFO = "first in, first out"
+//it means we add an item to the beggining(first added) and take the last one from the end

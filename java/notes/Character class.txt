@@ -1,0 +1,28 @@
+//char type is related with Character class!(SINGLE QUOTES ONLY!)
+	char ch = 'F';
+	OR
+	char ch = '7';
+
+//checks the case of character, returns true or false
+	boolean check = Character.isLowerCase(ch); 
+	OR
+	boolen check = Character.isUpperCase(ch);
+
+//changing the case of character
+	ch = Character.toUpperCase(ch);
+	OR
+	ch = Character.toLowerCase(ch);
+
+//checks the type of character (letter or digit or alphabetic(no punc.)), returns true or false
+	boolen check = Character.isDigit(ch);
+	OR
+	boolen check = Character.isLetter(ch);
+	OR
+	boolen check = Character.isAlphabetic(ch);
+
+//comparing 2 chars(we can't use .equals()!)
+//returns 0 if char1==char2, returns more than 0 if char1>char2, returns less than 0 is char1<char2
+	Character.compare(char1,char2);
+
+//if we do some math on 2 chars then we will use thei ASCII numbers
+	'a'+'b'=>97+98=195

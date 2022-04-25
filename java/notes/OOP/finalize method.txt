@@ -1,0 +1,10 @@
+//all classes in java have a parent Object class
+
+//when calling garbage collector by System.gc(); 
+//if any object of a current class has null reference or doesn't have any
+//before destroying the object in the heap memory
+//it will call finilaze() method of Object class, which CAN BE OVERRIDEN
+
+public void finalize(){
+	System.out.println("Deleting...");
+}

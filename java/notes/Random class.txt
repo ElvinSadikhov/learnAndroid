@@ -1,0 +1,11 @@
+//we must import Random class
+	import java.util.Random;
+
+//we must create an object at first
+	Random num = new Random();
+
+//returns integers from 0 to n-1
+	num.nextInt(n);
+
+//returns integer from a full range of java integers
+	num.nextInt();

@@ -1,0 +1,18 @@
+//Array is a static type array
+//the size cant be changed
+//WE CAN ACCESS VALUES BY INDEXES EASILY
+
+//initializing
+	int[] x; (no storage, just type)
+	int[] x = new int[12]; (creates 12 places with the value of 0)
+	String[] s = new String[12]; (creates 12 places with the value of null)
+	OR
+	int[] x = {1,2,4,4,3};
+	String[] s = {"hello","bye"};
+
+//we can read and write via indexes
+	s[3] = "Hello"; (we put "Hello" in the position 3)
+	x[2] = x[3] + 4; (we read and wrote at the same time)
+
+//length-it is not a method, it's an attribute (Array's length cannot change)
+	x.length; (NOT x.length())

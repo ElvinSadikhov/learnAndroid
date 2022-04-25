@@ -1,0 +1,14 @@
+package Algorithms;
+
+// binary serach implementation of Symbol Table
+public class BinarySearchST<Key, Value> {
+
+	private int n = 0; // num of elements (index of first free space in array too)
+
+	private int binarySearch(Key key) {
+		int lo = 0;
+		int hi = n - 1;
+
+	}
+
+}

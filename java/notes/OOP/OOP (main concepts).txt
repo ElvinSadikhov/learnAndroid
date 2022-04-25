@@ -1,0 +1,125 @@
+1) Encapsulation - is to make sure that "sensitive" data is hidden from users
+
+//Why Encapsulation?
+-Better control of class attributes and methods
+-Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)
+-Flexible: the programmer can change one part of the code without affecting other parts
+-Increased security of data
+
+
+//To achieve this, we must:
+-declare class variables/attributes as private
+-provide public get and set methods to access and update the value of a private variable
+(without getters and setters we cannot access private variables from any other class)
+
+public class Person {
+  private String name; // private = restricted access
+
+  // Getter
+  public String getName() {
+    return name;
+  }
+
+  // Setter
+  public void setName(String newName) {
+    this.name = newName;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.name = "John";  // error!!!!!!
+    System.out.println(myObj.name); // error !!!!
+  }
+}
+
+
+//so we use getName() and setName() method to access and update the variable:
+
+public class Main {
+  public static void main(String[] args) {
+    Person myObj = new Person();
+    myObj.setName("John"); // Set the value of the name variable to "John"
+    System.out.println(myObj.getName());
+  }
+}
+
+-Outputs "John"
+
+
+
+
+
+
+
+
+2) Inheritance - is a method of inheriting attributes and methods of another parent class
+-subclass (child) - the class that inherits from another class
+-superclass (parent) - the class being inherited from
+
+//To inherit from a class, use the extends keyword
+class Vehicle {
+  protected String brand = "Ford";        // Vehicle attribute
+  public void honk() {                    // Vehicle method
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";    // Car attribute
+  public static void main(String[] args) {
+
+    // Create a myCar object
+    Car myCar = new Car();
+
+    // Call the honk() method (from the Vehicle class) on the myCar object
+    myCar.honk();
+
+    // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+    System.out.println(myCar.brand + " " + myCar.modelName);
+  }
+}
+
+//final class
+	If you don't want other classes to inherit from a class, use the final keyword
+
+//we can use parent class as a reference variable
+	Vehicle obj = new Car();
+	(but now obj cann not access methods of Car because this object is Vehicle type)
+
+
+3) Polymorphism - "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+ (overloading - compile time polymorphism)
+ (overriding - run time polymorphism/dinamic)
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+-overloading is when in one class we have several methods with same names but different attributes(or whatever)
+//Method overloading
+//within the same class, when we have differenct methods
+//with the same name. BUT different ip parameters
+//sequence of the parameters is also different
+
+-overriding is when both parent and child class have same method.in this case child method will be executed
+
+//Can we override static method?
+	No, a static method cannot be overridden. It can be proved by runtime polymorphism, so we will learn it later.
+
+//Why can we not override static method?
+	It is because the static method is bound with class whereas instance method is bound with an object. Static belongs to the class area, and an instance belongs to the heap area.

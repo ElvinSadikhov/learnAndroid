@@ -1,0 +1,25 @@
+//post increment (works for char and double too)
+	int a = 1;//2
+	int b = a++;//1
+	(here the value of a will be assigned to b, and then a will increase by one)
+	OR
+	System.put.println(a++);1 (here we print the initial value and only hen increase it by 1)
+	
+
+//pre increment
+	int a = 1;//2
+	int b = ++a;//2
+	(here FIRST we increase a by 1, and then assign it to b)
+	
+//post decrement
+	int x = 2;//1
+	int y = x--;//2
+	(here the value of a will be assigned to y, and then a will decrease by one)
+
+//pre decrement
+	int x = 2;//1
+	int y =--a;//1
+	(here FIRST we decrease by 1, and then assign it to y)
+
+WORKS FOR CHAR AND DOUBLE TOO..
+BUT FOR CHAR WORKS IN THIS WAY => char l = 'a'; => l++ => 'b'

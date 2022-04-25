@@ -1,0 +1,6 @@
+// we can use it in order to call parent class constructor
+	super(WE CAN PASS VALUES HERE TOO);
+
+//in order to access variable or method which was overrided in child class
+//we use super. keyword
+	super.parentMethod();

@@ -1,0 +1,27 @@
+Kotlin:
+
+Variables: val, var, const val differences, type declaration and inference   
+Data types: 8 java primitives in kotlin, casting (as), type checks (is)                 
+Functions (methods): parameters and return types, Unit, main method in Kotlin, parameter default values, vararg
+Logical operations: if, else if, else, most importantly when expressions
+Loops: for, while, do while, while do
+Nullibility: Nullable and non-nullable types, safe call operator (?.), elvis operator (?:), null assertion operator (!!)
+String templates
+Exceptions: try catch finally
+OOP: Classes, interfaces, abstracts classes, sealed classes, objects (as a class type), enums, 4 main oop principles, creating objects (instances), companion objects,
+     multiple constructors, init block
+
+Object expressions and declarations
+Collections: List, set, map, pair, (stack and queue but not used that much), transformations
+Typealias
+Higher-order functions: functional types, scope functions, lambdas
+Extension functions and properties
+
+//Getting harder
+Generics
+Delegation
+Coroutines: suspending functions, dispatchers, scopes, jobs, context changing (withContext), flow, error handling
+
+
+//Extras
+Value (former inline) classes, Inline functions﻿, Operator overloading﻿, Destructuring declarations﻿, Nested vs Inner classes

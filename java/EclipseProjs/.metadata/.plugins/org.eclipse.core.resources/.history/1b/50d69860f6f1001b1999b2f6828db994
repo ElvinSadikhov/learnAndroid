@@ -1,0 +1,37 @@
+package Algorithms;
+
+// binary serach implementation of Symbol Table
+public class BinarySearchST<Key extends Comparable<Key>, Value> {
+	private final static int INIT_CAPACITY = 8;
+
+	private Key[] keys;
+	private Value[] values;
+	private int n; // num of elements (index of first free space in array too)
+
+	public BinarySearchST() {
+		this(INIT_CAPACITY);
+	}
+
+	public BinarySearchST(int capacity) {
+		keys = (Key[]) new Object[capacity];
+		values = (Value[]) new Object[capacity];
+		n = 0;
+	}
+
+	private int binarySearch(Key key) {
+		int lo = 0;
+		int hi = n - 1;
+		while (lo <= hi) {
+			int mid = lo + (hi - lo) / 2;
+			int temp = keys[mid].compareTo(key);
+			if (temp < 0)
+				lo = mid + 1;
+			else if (temp > 0)
+				hi = mid - 1;
+			else
+				return mid;
+		}
+		return -1;
+	}
+
+}

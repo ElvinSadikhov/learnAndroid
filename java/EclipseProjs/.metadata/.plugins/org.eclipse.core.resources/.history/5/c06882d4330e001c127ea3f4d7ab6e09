@@ -1,0 +1,33 @@
+package tries;
+
+public class StringST {
+
+	private final int R = 256;//
+
+	private class Node {
+
+		private Object value;
+		private Node[] next = new Node[R];
+
+		public Node(Object value) {
+			this.value = value;
+		}
+	}
+
+	private class Value {
+	}
+
+	public StringST() {
+
+	}
+
+	public void put(String key, Value val) {
+	}
+
+	public Value get(String key) {
+	}
+
+	public void delete(String key) {
+	}
+
+}

@@ -1,0 +1,38 @@
+//we need import in order to work with it
+	import java.util.HashMap;
+
+//getting started
+	HashMap<keyType,valueType> map = new HashMap<keyType,valueType>();
+	(keyType is immutable like Integer,String,Character
+	,but value type can be ArrayList,Array,String...)
+	(we use clasees not premitives => not int, but Integer, as a key or value)
+
+//virtual capacity
+	by default 16 virtual positions
+	in memory pairs are placed relating to hash codes of keys
+	! if 2 hashcodes give the same index, then they are both going to store in 
+	memory but in linked list
+
+//accessing values via key
+	map.get(keyName);(returns value of keyName)
+
+//changing or creating key and value
+	map.put(keyName,value);
+
+//length of HashMap
+	map.size();
+
+//removing key and its value
+	map.remove(keyName);
+
+//checking is there any key we need(boolean)
+	map.containsKey(keyName);
+
+//getting set of keys
+	map.keySet();
+
+//getting set of values
+	map.values();
+
+//deleting everything in a HashMap
+	map.clear();

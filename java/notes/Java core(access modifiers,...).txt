@@ -1,0 +1,8 @@
+//protected
+	it is mainly used as a attribute in parent class
+	and if use there private, then subclass will not be able to access it
+
+//static
+	it is used for thigs that are common for any objects
+	it is saved in CMA(common memory allocation)
+	can be aceessed directly and by using lcass name

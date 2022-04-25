@@ -1,0 +1,36 @@
+STACK
+//LIFO = "last in, first out"
+//it means we add an item to the end(last added) and we pop the last item in the stack
+
+
+//creatin an object
+	Stack<type> stk = new Stack<>();
+
+//pushing(adding to the end)
+	stk.push(element);
+
+//popping (deleting the las one in the stack)
+	stk.pop()
+
+//finding the last element of the stack(it's top)
+	stk.peek();
+
+//find operation(returns index of it, starting from the TOP OF THE STACK)
+	//indexing in stack starts from the top from 1(not zero)
+	//e.x.  [5,4,3,2,1] (in arrays it would be [0,1,2,3,4])
+
+	stk.search(element);
+
+//checking for emptiness
+	ctk.empty();
+
+//size 
+	stk.size();
+
+
+
+
+IF WE WRITE OURSELVES
+//there are 2 options: by linked list pr be resizeble array
+//linked list is doing faster operations
+//but array is doing faster in general because it doesnt need such time for links..

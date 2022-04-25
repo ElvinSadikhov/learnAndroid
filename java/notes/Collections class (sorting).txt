@@ -1,0 +1,5 @@
+//sort
+	Collections.sort(array);
+
+//reverse sort
+	Collections.sort(array, Collections.reverseOrder());

@@ -1,0 +1,107 @@
+package baseballElimination;
+
+import java.util.Stack;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.Queue;
+
+public class Baseball {
+
+	private String[] tNames;
+	private int[] tWins;
+	private int[] tLosses;
+	private int[] tRemain;
+	private int[][] tRemainOthers;
+	private int cTeams;
+	private int toTCapacity = 0;
+
+	private Queue<String> queue;
+
+	public Baseball(String filename) {
+
+		In in = new In(filename);
+		cTeams = Integer.parseInt(in.readLine());
+		tNames = new String[cTeams];
+		tWins = new int[cTeams];
+		tLosses = new int[cTeams];
+		tRemain = new int[cTeams];
+		tRemainOthers = new int[cTeams][cTeams];
+		queue = new Queue<>();
+
+		for (int iTeam = 0; iTeam < cTeams; iTeam++) {
+
+			String[] line = in.readLine().split(" ");
+
+			tNames[iTeam] = line[0];
+			tWins[iTeam] = Integer.parseInt(line[1]);
+			tLosses[iTeam] = Integer.parseInt(line[2]);
+			tRemain[iTeam] = Integer.parseInt(line[3]);
+
+			int n = 3;
+			for (int iAgainst = 0; iAgainst < cTeams; iAgainst++) {
+				tRemainOthers[iTeam][iAgainst] = Integer.parseInt(line[++n]);
+			}
+
+		}
+	}
+
+	// number of teams
+	public int numberOfTeams() {
+		return cTeams;
+	}
+
+	// all teams
+	public Iterable<String> teams() {
+		Stack<String> teams = new Stack<>();
+		for (String s : tNames) {
+			teams.push(s);
+		}
+		return teams;
+	}
+
+	// number of wins for given team
+	public int wins(String team) {
+		for (int i = 0; i < cTeams; i++) {
+			if (team.equals(tNames[i]))
+				return tWins[i];
+		}
+		throw new java.lang.IllegalArgumentException();
+	}
+
+	// number of losses for given team
+	public int losses(String team) {
+		for (int i = 0; i < cTeams; i++) {
+			if (team.equals(tNames[i]))
+				return tLosses[i];
+		}
+		throw new java.lang.IllegalArgumentException();
+	}
+
+	// number of remaining games for given team
+	public int remaining(String team) {
+		for (int i = 0; i < cTeams; i++) {
+			if (team.equals(tNames[i]))
+				return tRemain[i];
+		}
+		throw new java.lang.IllegalArgumentException();
+	}
+
+	// number of remaining games between team1 and team2
+	public int against(String team1, String team2) {
+		boolean flag1, flag2;
+		for (int iTeam = 0; iTeam < cTeams; iTeam++) {
+			if (tNames[iTeam].equals(team1)) {
+				flag1 = true;
+			} else if (tNames[iTeam].equals(team2)) {
+				flag2 = true;
+			}
+			if (!(flag1 || flag2)) {
+				throw new IllegalArgumentException();
+			}
+		}
+	}
+
+//	public          boolean isEliminated(String team)              // is given team eliminated?
+
+//	public Iterable<String> certificateOfElimination(String team)  // subset R of teams that eliminates given team; null if not eliminated
+
+}

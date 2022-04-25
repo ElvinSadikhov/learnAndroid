@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInUpActivity">
+
+    <EditText
+        android:id="@+id/edLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:hint="@string/login"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fitsSystemWindows="false"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edLogin"
+        app:layout_constraintTop_toBottomOf="@+id/edLogin" />
+
+    <Button
+        android:id="@+id/bSingInUp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickSignInUp"
+        android:text="@string/signUpState"
+        app:layout_constraintEnd_toEndOf="@+id/edPassword"
+        app:layout_constraintStart_toStartOf="@+id/edPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edFrsName" />
+
+    <Button
+        android:id="@+id/bAvatar"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickAvatar"
+        android:text="@string/avatar"
+        app:layout_constraintBottom_toTopOf="@+id/edLogin"
+        app:layout_constraintEnd_toEndOf="@+id/edLogin"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/edLogin" />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/bAvatar"
+        app:layout_constraintStart_toStartOf="@+id/bAvatar"
+        tools:srcCompat="@drawable/person" />
+
+    <EditText
+        android:id="@+id/edFstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/fstName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
+
+    <EditText
+        android:id="@+id/edSndName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/sndName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edFstName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edFstName"
+        app:layout_constraintTop_toBottomOf="@+id/edFstName" />
+
+    <EditText
+        android:id="@+id/edFrsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/frsName"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edSndName"
+        app:layout_constraintStart_toStartOf="@+id/edSndName"
+        app:layout_constraintTop_toBottomOf="@+id/edSndName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

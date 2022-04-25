@@ -1,0 +1,26 @@
+package tries;
+
+public class TrieST<Value> {
+
+	private static final int R = 256; // ASCII
+	private Node root = new Node();
+
+	private static class Node {
+		private Object value;
+		private Node[] next = new Node[R];
+	}
+
+	public TrieST() {
+
+	}
+
+	public void put(String key, Value val) {
+	}
+
+	public Value get(String key) {
+	}
+
+	public void delete(String key) {
+	}
+
+}

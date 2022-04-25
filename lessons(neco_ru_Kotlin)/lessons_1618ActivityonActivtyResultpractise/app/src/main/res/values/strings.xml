@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">lessons_16-18(Activity&amp;onActivtyResult&amp;practise)</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="fstName" translatable="false">First name</string>
+    <string name="sndName" translatable="false">Second name</string>
+    <string name="frsName" translatable="false">Father\'s name</string>
+    <string name="avatar" translatable="false">Set avatar</string>
+    <string name="signInState" translatable="false">sign in</string>
+    <string name="signUpState" translatable="false">sign up</string>
+    <string name="quit" translatable="false">Quit</string>
+    <string name="accountNotFound" translatable="false">There is no such account!</string>
+</resources>

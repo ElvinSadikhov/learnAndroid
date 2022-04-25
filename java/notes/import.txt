@@ -1,0 +1,20 @@
+//Taking input
+	import java.util.Scanner;
+
+//File
+	import java.io.File;
+
+//Duke
+	import edu.duke.*;
+
+//CSV
+	import org.apache.commons.csv.*;
+
+//Random for example
+	import java.util.Random;
+
+//ArrayList
+	import java.util.ArrayList;
+
+//HashMap
+	import java.util.HashMap;
